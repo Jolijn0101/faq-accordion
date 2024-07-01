@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8eeff;
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+    }
+}
+
+article {
+    margin: 143px auto;
+    background-color: #ffffff;
+    width: 87.2%;
+    padding: 1.5625rem;
+    border-radius: 8px;
+    box-shadow: 0px 32px 56px #51007620;
+}
+
+@media screen and (min-width: 767px) {
+    article {
+        max-width: 37.5rem;
+    }
+}
+
+h1,
+h2 {
+    color: #301534;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+h1 img {
+    margin-right: 1.5rem;
+    width: 1.5rem;
+}
+
+@media screen and (min-width: 767px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    h1 img {
+        width: 40px;
+    }
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    max-width: 225px;
+}
+
+@media screen and (min-width: 425px) {
+    h2 {
+        max-width: unset;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    h2 {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    h2:hover {
+        cursor: url('./assets/images/cursor.png'), pointer;
+        transition: color 0.5s ease-in-out;
+        color: #ad28eb;
+    }
+}
+
+.icon_holder {
+    background-image: url('./assets/images/icon-plus.svg');
+    width: 30px;
+    height: 31px;
+    margin-left: 30px;
+}
+
+.data-accordion-header[aria-expanded='true'] .icon_holder {
+    background-image: url('./assets/images/icon-minus.svg');
+}
+
+button {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+}
+
+section {
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+section:not([inert]) {
+    max-height: 150px;
+}
+
+section p {
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.3125rem;
+    color: #8b6990;
+}
+
+@media screen and (min-width: 767px) {
+    section p {
+        font-size: 1rem;
+    }
+}
+
+hr {
+    margin: 1.25rem 0rem;
+    border: 1px solid #f8eeff;
+    opacity: 60%;
+}
