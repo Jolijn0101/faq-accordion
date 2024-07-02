@@ -107,7 +107,7 @@ span {
     width: calc(100% - 30px - 24px);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 770px) {
     .btn-title {
         width: calc(100% - 30px);
     }
