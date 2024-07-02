@@ -107,6 +107,12 @@ span {
     width: calc(100% - 30px - 24px);
 }
 
+@media screen and (min-width: 1024px) {
+    .btn-title {
+        width: calc(100% - 30px);
+    }
+}
+
 .icon_holder {
     background-image: url('./assets/images/icon-plus.svg');
     width: 30px;
