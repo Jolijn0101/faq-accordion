@@ -74,7 +74,6 @@ h1 img {
 button {
     display: flex;
     align-items: center;
-    gap: 30px;
     justify-content: space-between;
     background-color: transparent;
     text-align: left;
