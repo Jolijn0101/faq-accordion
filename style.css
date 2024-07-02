@@ -17,7 +17,7 @@ body {
     }
 }
 
-article {
+main {
     margin: 143px auto;
     background-color: #ffffff;
     width: 87.2%;
@@ -27,19 +27,20 @@ article {
 }
 
 @media screen and (min-width: 767px) {
-    article {
+    main {
         max-width: 37.5rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    article {
+    main {
         padding: 2.5rem;
+        margin: 168px auto;
     }
 }
 
 h1,
-h2 {
+button {
     color: #301534;
     font-family: 'Work Sans', sans-serif;
 }
@@ -70,65 +71,63 @@ h1 img {
     }
 }
 
-h2 {
+button {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    background-color: transparent;
+    text-align: left;
+    min-height: 30px;
+    width: 100%;
+    border: none;
     font-size: 1rem;
     font-weight: 600;
-    max-width: 225px;
-}
-
-@media screen and (min-width: 425px) {
-    h2 {
-        max-width: unset;
-    }
 }
 
 @media screen and (min-width: 767px) {
-    h2 {
+    button {
         font-size: 1.125rem;
     }
 }
 
 @media screen and (min-width: 770px) {
-    h2:hover {
+    button:hover {
         cursor: url('./assets/images/cursor.png'), pointer;
         transition: color 0.5s ease-in-out;
         color: #ad28eb;
     }
 }
 
+span {
+    display: block;
+}
+
+.btn-title {
+    width: calc(100% - 30px - 24px);
+}
+
 .icon_holder {
     background-image: url('./assets/images/icon-plus.svg');
     width: 30px;
     height: 31px;
-    margin-left: 30px;
 }
 
 .data-accordion-header[aria-expanded='true'] .icon_holder {
     background-image: url('./assets/images/icon-minus.svg');
 }
 
-button {
-    display: grid;
-    grid-template-columns: 8fr 1fr;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-    background-color: transparent;
-    border: none;
-}
-
-section {
+.panel {
     transition: max-height 0.5s ease-in-out;
     overflow: hidden;
     max-height: 0;
 }
 
-section:not([inert]) {
+.panel:not([inert]) {
     max-height: 150px;
 }
 
-section p {
+.panel p {
     padding-top: 1.5rem;
     font-size: 0.875rem;
     font-family: 'Work Sans', sans-serif;
@@ -137,7 +136,7 @@ section p {
 }
 
 @media screen and (min-width: 767px) {
-    section p {
+    .panel p {
         font-size: 1rem;
         line-height: 140%;
     }
